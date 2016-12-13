@@ -26,7 +26,7 @@ class NLTK_Greg(object):
 
 
 
-
+'''
 dat=str(nltk.data.load('corpora/final_dataset/'+str(address),format='raw')).lower()#dat contains data of the current text files
         tokenizer=list(sent_tokenize(dat))#all the data being tokenized into sentences and made alist of that
         features=[]  #for all sent tokenizer it will have data as list of list containing noun phrases
