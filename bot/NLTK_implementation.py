@@ -7,7 +7,7 @@ import re
 import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
 
-class NLTK(object):
+class NLTK_Greg(object):
     def __init__(self, slack_clients):
         self.clients = slack_clients
     def recieve_text(self,text):

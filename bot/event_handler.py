@@ -1,7 +1,8 @@
 import json
 import logging
 import re
-import NLTK_implement
+
+
 
 logger = logging.getLogger(__name__)
 '''
@@ -25,9 +26,10 @@ class RtmEventHandler(object):
         conversation_started = 'False'
 
 
-    def __init__(self, slack_clients, msg_writer, NLTK):
+    def __init__(self, slack_clients, msg_writer, NLTK_implement):
         self.clients = slack_clients
         self.msg_writer = msg_writer
+        self.NLTK = NLTK_implement
 
     def handle(self, event):
         exists = 'conversation_started' in locals() or 'conversation_started' in globals()
