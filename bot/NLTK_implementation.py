@@ -2,7 +2,7 @@
 # nltk implementation
 import json
 import logging
-import nltk
+#import nltk
 import re
 import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
