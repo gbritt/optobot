@@ -7,6 +7,7 @@ import re
 import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
 import nltk.data
+from watson_developer_cloud import AlchemyLanguageV1 as AlchemyLanguage
 
 class NLTK_Greg(object):
     def __init__(self, slack_clients):
