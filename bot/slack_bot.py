@@ -46,7 +46,7 @@ class SlackBot(object):
                 self.clients.rtm.server.domain))
 
             msg_writer = Messenger(self.clients)
-            NLTK_implement = NTLK_Greg(self.clients)
+            NLTK_implement = NLTK_Greg(self.clients)
             event_handler = RtmEventHandler(self.clients, msg_writer, NLTK_implement)
 
             while self.keep_running:
