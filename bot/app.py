@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     slack_token = os.getenv("SLACK_TOKEN", "")
     logging.info("token: {}".format(slack_token))
-    alchemytoken = os.getenv("apikey", "")
+    #alchemytoken = os.getenv("apikey", "")
     #logging.info("apikey: {}".format(slack_token))
 
     if slack_token == "":
