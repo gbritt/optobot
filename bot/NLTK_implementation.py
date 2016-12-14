@@ -13,7 +13,7 @@ class NLTK_Greg(object):
         self.clients = slack_clients
     def recieve_text(self,text):
         text = "I am your friendly Slack bot written in Python.  I will respond to commands"
-        tokenizer = list(nltk.sent_tokenize(text))
+        tokenizer = list(nltk.data.sent_tokenize(text))
         features = []
         for i in range(len(tokenizer)):
             words=nltk.data.word_tokenize(tokenizer[i])#for each sentence all words have been tokenized

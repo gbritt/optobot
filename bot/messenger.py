@@ -8,6 +8,8 @@ from slacker import Slacker
 import json
 import argparse
 import os
+from alchemyapi import AlchemyAPI
+
 
 logger = logging.getLogger(__name__)
 #sys.setdefaultencoding("utf-8")
@@ -17,6 +19,7 @@ logger = logging.getLogger(__name__)
 class Messenger(object):
     def __init__(self, slack_clients):
         self.clients = slack_clients
+        alchemyapi = AlchemyAPI()
 
     def send_message(self, channel_id, msg):
         # in the case of Group and Private channels, RTM channel payload is a complex dictionary
