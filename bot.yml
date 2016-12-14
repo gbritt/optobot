@@ -12,7 +12,7 @@ config:
     info: This is an secret option
     type: secret
     default: not secret though
-  - name: Alchemy_acess
+  - name: Alchemy_access
     type: secret
     global true
     
