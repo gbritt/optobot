@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import logging
+#import logging
 import os
 
 from beepboop import resourcer
@@ -18,12 +18,12 @@ if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', level=log_level)
 
     slack_token = os.getenv("SLACK_TOKEN", "")
-    logging.info("token: {}".format(slack_token))
+    #logging.info("token: {}".format(slack_token))
     #alchemytoken = os.getenv("apikey", "")
     #logging.info("apikey: {}".format(slack_token))
 
     if slack_token == "":
-        logging.info("SLACK_TOKEN env var not set, expecting token to be provided by Resourcer events")
+        #logging.info("SLACK_TOKEN env var not set, expecting token to be provided by Resourcer events")
         slack_token = None
         botManager = bot_manager.BotManager(spawn_bot)
         res = resourcer.Resourcer(botManager)
