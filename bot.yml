@@ -12,8 +12,11 @@ config:
     info: This is an secret option
     type: secret
     default: not secret though
-  - name: Alchemy_access
+  - name: Alchemy_access_usrname
     type: secret
     global: true    
+  - name: Alchemy_access_pw
+    type: secret
+    global: true 
 screenshots:
   - screenshot: resources/screenshot1.png
