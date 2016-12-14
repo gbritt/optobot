@@ -11,7 +11,7 @@ class NLTK_Greg(object):
     def __init__(self, slack_clients):
         self.clients = slack_clients
     def recieve_text(self,text):
-        text = str(text)
+        text = "I am your friendly Slack bot written in Python.  I will respond to commands"
         words = text.flatMap(word_tokenize)
         test1 = words.take(10)
         pos_word = words.map(pos_tag)
