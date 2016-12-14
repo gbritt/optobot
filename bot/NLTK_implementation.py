@@ -16,7 +16,7 @@ class NLTK_Greg(object):
         tokenizer = list(nltk.sent_tokenize(text))
         features = []
         for i in range(len(tokenizer)):
-            words=nltk.word_tokenize(tokenizer[i])#for each sentence all words have been tokenized
+            words=nltk.data.word_tokenize(tokenizer[i])#for each sentence all words have been tokenized
             tagged=nltk.pos_tag(words)#pos tags given
             chunkgram=r"""Chunk: {<JJ.?>*<NN.?>*<NNPS>*<NN.?>}"""#now extracting only noun phrases i.e,extracting medical terms
             chunkparser=nltk.RegexpParser(chunkgram)
