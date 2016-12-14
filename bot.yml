@@ -14,6 +14,6 @@ config:
     default: not secret though
   - name: Alchemy_access
     type: secret
-    global true    
+    global: true    
 screenshots:
   - screenshot: resources/screenshot1.png
