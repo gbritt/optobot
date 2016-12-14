@@ -82,8 +82,8 @@ class RtmEventHandler(object):
                     conversation_started = 'True'
                     convo_step = '2'
                     self.msg_writer.write_history(event['channel'], event['user'])
-                    tokenize, pos = self.NLTK.recieve_text(msg_txt)
-                    self.msg_write.write_NLP(event['channel'], event['user'], tokenize, pos)
+                    sentiment = self.NLTK.get_text_sentiment(msg_txt)
+                    self.msg_write.write_NLP(event['channel'], event['user'], sentiment)
                 elif 'joke' in msg_txt:
                     self.msg_writer.write_joke(event['channel'])
                 elif 'attachment' in msg_txt:

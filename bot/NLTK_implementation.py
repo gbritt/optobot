@@ -8,10 +8,20 @@ import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
 import nltk.data
 from watson_developer_cloud import AlchemyLanguageV1 as AlchemyLanguage
+import os
 
 class NLTK_Greg(object):
     def __init__(self, slack_clients):
         self.clients = slack_clients
+        self.alchemytoken = os.getenv("apikey")
+    def get_text_sentiment(text):
+        alchemy_language = AlchemyLanguage(api_key=self.alchemytoken)
+        result = alchemy_language.sentiment(text=text)
+        if result[‘docSentiment’][‘type’] == ‘neutral’:
+            return ‘netural’, 0
+        return result[‘docSentiment’][‘type’],
+           result[‘docSentiment’[‘score’]
+    '''
     def recieve_text(self,text):
         text = "I am your friendly Slack bot written in Python.  I will respond to commands"
         tokenizer = list(nltk.data.sent_tokenize(text))
@@ -50,7 +60,7 @@ class NLTK_Greg(object):
         return(filtered_words)
 
 
-        '''
+
         words = text.flatMap(word_tokenize)
         test1 = words.take(10)
         pos_word = words.map(pos_tag)
