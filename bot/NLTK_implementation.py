@@ -6,6 +6,7 @@ import nltk
 import re
 import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
+import nltk.data
 
 class NLTK_Greg(object):
     def __init__(self, slack_clients):
