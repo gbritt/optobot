@@ -38,6 +38,7 @@ class SlackBot(object):
         if 'resource' in resource and 'SlackBotAccessToken' in resource['resource']:
             res_access_token = resource['resource']['SlackBotAccessToken']
             self.clients = SlackClients(res_access_token)
+            
 
         if self.clients.rtm.rtm_connect():
             logging.info(u'Connected {} to {} team at https://{}.slack.com'.format(
