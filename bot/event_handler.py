@@ -93,7 +93,7 @@ class RtmEventHandler(object):
                 else:
                     self.msg_writer.write_prompt(event['channel'])
 
-            elif conversation_started == 'True' and self.clients.is_bot_mention(msg_txt):
+            elif conversation_started == 'True'
                 if 'test' in msg_txt:
                     self.msg_writer.write_convo2(event['channel'], event['user'])
                     convo_step = '1'
@@ -134,3 +134,4 @@ class RtmEventHandler(object):
                     conversation_started = 'False'
                 else:
                     self.msg_writer.write_prompt(event['channel'])
+                    convo_step = '1'

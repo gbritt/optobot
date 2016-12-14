@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 class Messenger(object):
     def __init__(self, slack_clients):
         self.clients = slack_clients
-        alchemytoken = os.getenv("apikey", "")
+
 
     def send_message(self, channel_id, msg):
         # in the case of Group and Private channels, RTM channel payload is a complex dictionary
@@ -41,11 +41,14 @@ class Messenger(object):
 
     def write_greeting(self, channel_id, user_id):
 
+        '''
         with open('test.txt', 'r') as filestream:
             for line in filestream:
                 greetings = line.split(",")
+        '''
 
-
+        greetings = 'Hey!, Howdy!, Hello!'
+        txt = '{}, <@{}>!'.format(random.choice(greetings), user_id)
         txt = '{}, <@{}>!'.format(random.choice(greetings), user_id)
         self.send_message(channel_id, txt)
 # Section for initial conversation between grossman and patient
