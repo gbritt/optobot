@@ -170,6 +170,6 @@ class Messenger(object):
         }
         self.clients.web.files.upload('test.txt')
     def write_NLP(self, channel_id, user_id, tokenize, pos):
-        txt = ":face_with_head_bandage: my maker didn't handle this error very well:\n>```{}```".format(err_msg)
+        
         tokenize = str(tokenize)
         self.send_message(channel_id, tokenize)

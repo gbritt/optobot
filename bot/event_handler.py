@@ -42,7 +42,7 @@ class RtmEventHandler(object):
     def checkNLP(self,event):
         if ('user' in event) and (not self.clients.is_message_from_me(event['user'])):
             msg_txt = event['text']
-            tokenize, pos = NLTK_implementself.recieve_text(msg_txt)
+            tokenize, pos = self.NLTK.recieve_text(msg_txt)
 
 
 
@@ -82,7 +82,7 @@ class RtmEventHandler(object):
                     conversation_started = 'True'
                     convo_step = '2'
                     self.msg_writer.write_history(event['channel'], event['user'])
-                    tokenize, pos = NLTK_implementself.recieve_text(msg_txt)
+                    tokenize, pos = self.NLTK.recieve_text(msg_txt)
                     self.msg_write.write_NLP(event['channel'], event['user'], tokenize, pos)
                 elif 'joke' in msg_txt:
                     self.msg_writer.write_joke(event['channel'])
