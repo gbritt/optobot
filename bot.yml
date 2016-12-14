@@ -7,6 +7,9 @@ config:
     friendly_name: Severity level to show for logging.
     info: See https://docs.python.org/2/library/logging.html#levels
     default: DEBUG
+  - name: apikey
+    type: secret
+    global: true
   - name: SECRET
     friendly_name: Shhhh
     info: This is an secret option
