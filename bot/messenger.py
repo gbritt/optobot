@@ -169,7 +169,7 @@ class Messenger(object):
             "color": "#7CD197",
         }
         self.clients.web.files.upload('test.txt')
-    def write_NLP(self, channel_id, user_id, tokenize, pos):
-        
-        tokenize = str(tokenize)
+    def write_NLP(self, channel_id, user_id, features):
+
+        features = str(features)
         self.send_message(channel_id, tokenize)
