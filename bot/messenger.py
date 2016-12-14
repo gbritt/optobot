@@ -8,7 +8,7 @@ from slacker import Slacker
 import json
 import argparse
 import os
-from alchemyapi import AlchemyAPI
+
 
 
 logger = logging.getLogger(__name__)
